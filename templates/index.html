@@ -18,7 +18,7 @@
 <header class="l-header">
     <nav class="nav bd-grid">
         <div>
-            <a href="#" class="nav__logo">Shaharia</a>
+            <a href="#" class="nav__logo">{{ about.name }}</a>
         </div>
 
         <div class="nav__menu" id="nav-menu">
@@ -42,7 +42,7 @@
     <!--===== HOME =====-->
     <section class="home bd-grid" id="home">
         <div class="home__data">
-            <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Shaharia</span><br> Software Engineer
+            <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">{{ about.name }}</span><br> {{ about.title }}
             </h1>
 
             <a href="#" class="button">Contact</a>
@@ -82,7 +82,7 @@
             </div>
 
             <div>
-                <h2 class="about__subtitle">I'am Shaharia</h2>
+                <h2 class="about__subtitle">I'am {{ about.name }}</h2>
                 <p class="about__text" align="justify"
                 >My name is Md Shaharia Safat Rony. Basically, I belong to Chapainawagonj but for 4 years I have been
                     living in Dhaka. Coming to Qualifications, I have passed 10th and 12th from up board with first
