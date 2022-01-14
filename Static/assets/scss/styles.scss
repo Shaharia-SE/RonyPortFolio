@@ -95,7 +95,6 @@ img{
 
 /*===== LAYOUT =====*/
 .bd-grid{
-    max-width: 1024px;
     display: grid;
     margin-left: var(--mb-2);
     margin-right: var(--mb-2);
@@ -364,7 +363,7 @@ img{
     text-align: center;
     font-weight: var(--font-semi);
     padding: 2rem 0;
-
+    margin-top: 50px;
     &__title{
         font-size: 2rem;
         margin-bottom: var(--mb-4);
