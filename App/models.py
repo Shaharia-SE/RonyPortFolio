@@ -14,6 +14,14 @@ class about(models.Model):
     Address = models.CharField(max_length=200, blank=True)
     def __str__(self):
         return self.name
+class Info(models.Model):
+    name = models.CharField(max_length=200, blank=True)
+    email = models.CharField(max_length=200, blank=True)
+    message = models.CharField(max_length=2000, blank=True)
+    def __str__(self):
+        return self.email
+
+
 
 
 
