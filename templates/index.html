@@ -44,7 +44,8 @@
     <section class="home bd-grid" id="home" style="margin-left: 60px;
     margin-right: 60px;">
         <div class="home__data">
-            <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">{{ about.name }}</span><br> {{ about.title }}
+            <h1 class="home__title">Hi,<br>I'am <span
+                    class="home__title-color">{{ about.name }}</span><br> {{ about.title }}
             </h1>
 
             <a href="#" class="button">Contact</a>
@@ -201,7 +202,7 @@
 
                 <h1>Information</h1>
                 <h3> {{ about.firstname }}</h3>
-                <p>Father's {{about.fathername}}</p>
+                <p>Father's {{ about.fathername }}</p>
                 <p>Mother's {{ about.mothername }}</p>
                 <p> phone: {{ about.phone }} </p>
                 <a href="https://mail.google.com/mail/u/0/#inbox" class="about__container">Mail :{{ about.mail }}</a>
@@ -214,13 +215,14 @@
             </div>
 
             <div class="contact__container bd-grid">
-                <form action="" class="contact__form">
-                    <input type="text" placeholder="Name" class="contact__input">
-                    <input type="mail" placeholder="Email" class="contact__input">
-                    <textarea name="" placeholder="written your Message" id="" cols="0" rows="10"
-                              class="contact__input"></textarea>
-                    <input type="button" value="Send" class="contact__button button">
-                </form>
+                <form action="/" method="post" role="form">
+                    {% csrf_token %}
+                    <input type="text" name="name" placeholder="Name" class="contact__input">
+                    <input type="mail" name="email" placeholder="Email" class="contact__input">
+                    <textarea name="message" cols="0" rows="10" class="contact__input"></textarea>
+
+                    <input type="submit" value="Send" class="contact__button button">
+                    </form>
             </div>
         </div>
     </section>
@@ -230,19 +232,19 @@
 
 
 <!--===== CONTACT =====
-<section class="contact section" id="contact">
-    <h2 class="section-title">Contact</h2>
+<section class=" contact section" id="contact">
+                    <h2 class="section-title">Contact</h2>
 
-    <div class="contact__container bd-grid">
-        <form action="" class="contact__form">
-            <input type="text" placeholder="Name" class="contact__input">
-            <input type="mail" placeholder="Email" class="contact__input">
-            <textarea name="" placeholder="written your Message" id="" cols="0" rows="10"
-                      class="contact__input"></textarea>
-            <input type="button" value="Send" class="contact__button button">
-        </form>
-    </div>
-</section>
+                    <div class="contact__container bd-grid">
+                        <form action="" class="contact__form">
+                            <input type="text" placeholder="Name" class="contact__input">
+                            <input type="mail" placeholder="Email" class="contact__input">
+                            <textarea name="" placeholder="written your Message" id="" cols="0" rows="10"
+                                      class="contact__input"></textarea>
+                            <input type="button" value="Send" class="contact__button button">
+                        </form>
+                    </div>
+    </section>
 
 </main>
 -->
@@ -250,7 +252,10 @@
 <section class="home bd-grid" id="resume">
     <h2 class="section-title">Resume</h2>
     <div style="display: flex;justify-content: center">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Bg6PTY_TziQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Bg6PTY_TziQ" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
 
     </div>
 
@@ -274,10 +279,10 @@
 </section>
 
 
-    <!--===== SCROLL REVEAL =====-->
-    <script src="https://unpkg.com/scrollreveal"></script>
+<!--===== SCROLL REVEAL =====-->
+<script src="https://unpkg.com/scrollreveal"></script>
 
-    <!--===== MAIN JS =====-->
-    <script src="{% static 'assets/js/main.js' %}"></script>
+<!--===== MAIN JS =====-->
+<script src="{% static 'assets/js/main.js' %}"></script>
 </body>
 </html>

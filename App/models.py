@@ -12,19 +12,15 @@ class about(models.Model):
     phone = models.CharField(max_length=200, blank=True)
     mail = models.CharField(max_length=200, blank=True)
     Address = models.CharField(max_length=200, blank=True)
+
     def __str__(self):
         return self.name
+
+
 class Info(models.Model):
     name = models.CharField(max_length=200, blank=True)
     email = models.CharField(max_length=200, blank=True)
     message = models.CharField(max_length=2000, blank=True)
+
     def __str__(self):
-        return self.email
-
-
-
-
-
-
-
-
+        return self.name
